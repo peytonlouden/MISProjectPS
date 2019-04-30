@@ -106,6 +106,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="CalendarControl.aspx" />
+    <Content Include="CalendarUsingJQuery.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -127,6 +129,8 @@
     <Content Include="MasterPage.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Home Page.aspx" />
+    <Content Include="LoginPage.aspx" />
+    <Content Include="LoginPage2.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -171,6 +175,20 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CalendarControl.aspx.cs">
+      <DependentUpon>CalendarControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CalendarControl.aspx.designer.cs">
+      <DependentUpon>CalendarControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarUsingJQuery.aspx.cs">
+      <DependentUpon>CalendarUsingJQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CalendarUsingJQuery.aspx.designer.cs">
+      <DependentUpon>CalendarUsingJQuery.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -195,12 +213,28 @@
     <Compile Include="Home Page.aspx.designer.cs">
       <DependentUpon>Home Page.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+=======
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage2.aspx.cs">
+      <DependentUpon>LoginPage2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage2.aspx.designer.cs">
+      <DependentUpon>LoginPage2.aspx</DependentUpon>
+>>>>>>> eecdb5008e386e5c7eb5b54a55407b33be02a24e
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
