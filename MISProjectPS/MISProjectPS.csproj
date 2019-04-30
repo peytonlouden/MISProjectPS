@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DHTMLX, Version=2.0.4659.22341, Culture=neutral, PublicKeyToken=53f24791214eb8ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\DHTMLX.Scheduler.NET.2.0.0.3\lib\DHTMLX.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -106,6 +109,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Appointment.aspx" />
+    <Content Include="Calendar.aspx" />
     <Content Include="CalendarControl.aspx" />
     <Content Include="CalendarUsingJQuery.aspx" />
     <Content Include="Contact.aspx" />
@@ -115,6 +120,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="dhxscheduler.sample.webforms.readme.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -127,12 +133,98 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="MasterPage.Master" />
+    <Content Include="Save.ashx" />
+    <Content Include="Data.ashx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Home Page.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="LoginPage2.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler.css" />
+    <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler.js" />
+    <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler_custom_lightbox.js" />
+    <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler_dhx_terrace.css" />
+    <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler_glossy.css" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_active_links.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_agenda_view.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_all_timed.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_collision.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_cookie.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_dhx_terrace.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_editors.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_expand.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_grid_view.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_html_templates.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_key_nav.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_limit.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_map_view.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_minical.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_multiselect.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_multisource.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_offline.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_outerdrag.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_pdf.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_readonly.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_recurring.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_serialize.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_timeline.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_tooltip.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_treetimeline.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_units.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_url.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_week_agenda.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_year_view.js" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\buttons.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\but_repeat.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\calendar.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\clock_big.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\clock_small.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\collapse_expand_icon.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\controls.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\databg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\databg_now.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\icon.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\images.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\loading.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\resize_dots.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\arrow_left.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\arrow_right.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\but_repeat.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\calendar.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\clock_big.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\clock_small.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\close_icon.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\collapse_expand_icon.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\controls.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\databg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\databg_now.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\resize_dots.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\resizing.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\blue_tab.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\blue_tab_wide.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\buttons.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\but_repeat.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\calendar.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\clock_big.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\clock_small.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\collapse_expand_icon.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\controlls5.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\databg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\databg_now.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\event-bg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\icon.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\left-separator.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\left-time-bg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\lightbox.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\loading.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\move.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\multi-days-bg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\second-top-days-bg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\top-days-bg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\top-separator.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\white_tab.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\white_tab_wide.png" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -166,6 +258,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointment.aspx.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Appointment.aspx.designer.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -175,6 +274,10 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="CalendarControl.aspx.cs">
       <DependentUpon>CalendarControl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -182,6 +285,7 @@
     <Compile Include="CalendarControl.aspx.designer.cs">
       <DependentUpon>CalendarControl.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CalendarEvent.cs" />
     <Compile Include="CalendarUsingJQuery.aspx.cs">
       <DependentUpon>CalendarUsingJQuery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -213,14 +317,13 @@
     <Compile Include="Home Page.aspx.designer.cs">
       <DependentUpon>Home Page.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
-=======
+    </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -234,7 +337,6 @@
     </Compile>
     <Compile Include="LoginPage2.aspx.designer.cs">
       <DependentUpon>LoginPage2.aspx</DependentUpon>
->>>>>>> eecdb5008e386e5c7eb5b54a55407b33be02a24e
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
