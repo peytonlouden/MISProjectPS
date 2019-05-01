@@ -57,6 +57,9 @@
       <HintPath>..\packages\EntityFramework.SqlServerCompact.6.2.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MindFusion.Scheduling.WebForms, Version=3.2.0.0, Culture=neutral, PublicKeyToken=1f8404677be623be, processorArchitecture=MSIL">
+      <HintPath>..\packages\MindFusion.Scheduling.WebForms.3.2.0\lib\net40\MindFusion.Scheduling.WebForms.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -124,9 +127,9 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Appointment.aspx" />
-    <Content Include="Calendar.aspx" />
+    <Content Include="Calculator.aspx" />
     <Content Include="CalendarControl.aspx" />
-    <Content Include="CalendarUsingJQuery.aspx" />
+    <Content Include="Calender2.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -134,7 +137,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
-    <Content Include="dhxscheduler.sample.webforms.readme.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -146,6 +148,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="HomePage.aspx" />
     <Content Include="LoginRegister.aspx" />
     <Content Include="Save.ashx" />
     <Content Include="Data.ashx" />
@@ -304,9 +307,12 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Calendar.aspx.cs">
-      <DependentUpon>Calendar.aspx</DependentUpon>
+    <Compile Include="Calculator.aspx.cs">
+      <DependentUpon>Calculator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calculator.aspx.designer.cs">
+      <DependentUpon>Calculator.aspx</DependentUpon>
     </Compile>
     <Compile Include="CalendarControl.aspx.cs">
       <DependentUpon>CalendarControl.aspx</DependentUpon>
@@ -315,13 +321,12 @@
     <Compile Include="CalendarControl.aspx.designer.cs">
       <DependentUpon>CalendarControl.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CalendarEvent.cs" />
-    <Compile Include="CalendarUsingJQuery.aspx.cs">
-      <DependentUpon>CalendarUsingJQuery.aspx</DependentUpon>
+    <Compile Include="Calender2.aspx.cs">
+      <DependentUpon>Calender2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CalendarUsingJQuery.aspx.designer.cs">
-      <DependentUpon>CalendarUsingJQuery.aspx</DependentUpon>
+    <Compile Include="Calender2.aspx.designer.cs">
+      <DependentUpon>Calender2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -339,6 +344,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoginPage2.aspx.cs">
       <DependentUpon>LoginPage2.aspx</DependentUpon>
