@@ -146,6 +146,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="LoginRegister.aspx" />
     <Content Include="Save.ashx" />
     <Content Include="Data.ashx" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
@@ -345,6 +346,13 @@
     </Compile>
     <Compile Include="LoginPage2.aspx.designer.cs">
       <DependentUpon>LoginPage2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginRegister.aspx.cs">
+      <DependentUpon>LoginRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginRegister.aspx.designer.cs">
+      <DependentUpon>LoginRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Product.cs" />
